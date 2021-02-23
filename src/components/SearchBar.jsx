@@ -1,11 +1,19 @@
 import React from 'react'
 import { Button, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const SearchBar = () => {
   return (
       <View style={styles.searchBarContainer}>
         <Text style={styles.searchBarTitle}>Search</Text>
-        <TextInput style={styles.searchBarTextInput} placeholder="Entrez votre recherche"/>
+        <View style={styles.searchBarInput}>
+          <MaterialCommunityIcons style={styles.searchIcon} name="filmstrip-box-multiple" size={24} color="black" />
+          <TextInput 
+            style={styles.searchBarTextInput} 
+            placeholder="Entrez votre recherche"
+            // icon={()=> <MaterialCommunityIcons name="access-point" size={2} color="red"/>}
+          />
+        </View>
       </View>
   )
 }
@@ -15,6 +23,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 50,
     fontWeight: 'bold',
+  },
+  searchBarInput: {
+    // flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   searchBarContainer: {
     backgroundColor: '#ffe100',
@@ -28,7 +42,16 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     padding: 10,
     borderRadius: 10,
-    marginTop: 20
+    marginTop: 20,
+    width: '100%',
+    paddingLeft: 40
+  },
+  searchIcon: {
+    // marginLeft: 50
+    position: 'absolute',
+    top: 28,
+    left: 10,
+    zIndex: 10,
   }
 });
 
