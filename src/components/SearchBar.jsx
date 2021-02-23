@@ -11,22 +11,15 @@ const SearchBar = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   searchBarTitle: {
     fontSize: 18,
     marginTop: 50
   },
   searchBarContainer: {
-    // flex: 1,
     backgroundColor: '#ffe100',
     padding: 20,
-    // width: '100%',
-    // position: 'absolute',
-    // top: 0
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    borderBottomRightRadius: 15,
+    borderBottomLeftRadius: 15
   },
   searchBarTextInput: {
     borderColor: '#000000',
@@ -34,7 +27,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     padding: 10,
     borderRadius: 10,
-    // width: '100%',
     marginTop: 20
   }
 });
