@@ -13,7 +13,8 @@ const SearchBar = () => {
 const styles = StyleSheet.create({
   searchBarTitle: {
     fontSize: 18,
-    marginTop: 50
+    marginTop: 50,
+    fontWeight: 'bold',
   },
   searchBarContainer: {
     backgroundColor: '#ffe100',

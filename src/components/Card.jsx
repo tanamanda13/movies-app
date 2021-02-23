@@ -1,20 +1,26 @@
 import React from 'react'
-import { Text, View, StyleSheet, Image } from 'react-native'
+import { Text, View, StyleSheet, Image, TouchableHighlight } from 'react-native'
 
 const Card = ({movieTitle, releaseDate}) => {
   return (
-    <View style={styles.cardContainer}>
-      <View style={styles.cardImage}>
-        <Image style={styles.moviePicture}
-          resizeMode={'contain'}
-          source={{uri: 'https://img-4.linternaute.com/hjM5dgLFPajbUWUmTVDwLHOqt3c=/1240x/19547719906f480d80a7c0a77d93f6be/ccmcms-linternaute/127232.jpg'}}
-        ></Image>
+    <TouchableHighlight
+    activeOpacity={0.6}
+    underlayColor="#DDDDDD"
+    onPress={() => alert('Pressed!')}
+    >
+      <View style={styles.cardContainer}>
+        <View style={styles.cardImage}>
+          <Image style={styles.moviePicture}
+            resizeMode={'contain'}
+            source={{uri: 'https://img-4.linternaute.com/hjM5dgLFPajbUWUmTVDwLHOqt3c=/1240x/19547719906f480d80a7c0a77d93f6be/ccmcms-linternaute/127232.jpg'}}
+          ></Image>
+        </View>
+        <View style={styles.cardText}>
+          <Text style={styles.movieTitle}>{movieTitle}</Text>
+          <Text>{releaseDate}</Text>
+        </View>
       </View>
-      <View style={styles.cardText}>
-        <Text style={styles.movieTitle}>{movieTitle}</Text>
-        <Text>{releaseDate}</Text>
-      </View>
-    </View>
+    </TouchableHighlight>
   )
 }
 
