@@ -9,6 +9,7 @@ const SearchBar = ({searchText, onSearch}) => {
         <View style={styles.searchBarInput}>
           <MaterialCommunityIcons style={styles.searchIcon} name="filmstrip-box-multiple" size={24} color="black" />
           <TextInput 
+            // onChangeText={text => onSearch(text)}
             onChangeText={text => onSearch(text)}
             style={styles.searchBarTextInput} 
             placeholder="Entrez votre recherche"

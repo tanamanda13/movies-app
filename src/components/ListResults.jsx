@@ -10,7 +10,8 @@ const ListResults = ({movies}) => {
       <FlatList
         // data={data}
         data={movies}
-        renderItem={({item}) => <Card movieTitle={item.title} releaseDate={item.release_date}/> }
+        // renderItem={({item}) => <Card movieTitle={item.title} releaseDate={item.release_date}/> }
+        renderItem={({item}) => <Card movieTitle={item.title} releaseDate={item.release_date} urlImage={item.poster_path}/> }
         keyExtractor={item => item.id.toString()}
       />
     </View>

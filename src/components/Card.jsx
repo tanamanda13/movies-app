@@ -1,7 +1,10 @@
 import React from 'react'
 import { Text, View, StyleSheet, Image, TouchableHighlight } from 'react-native'
 
-const Card = ({movieTitle, releaseDate}) => {
+import {REACT_APP_API_URL_IMAGE} from "@env"
+
+const Card = ({movieTitle, releaseDate, urlImage}) => {
+  // console.log('photo', urlImage)
   return (
     <TouchableHighlight
     activeOpacity={0.6}
@@ -12,7 +15,7 @@ const Card = ({movieTitle, releaseDate}) => {
         <View style={styles.cardImage}>
           <Image style={styles.moviePicture}
             resizeMode={'contain'}
-            source={{uri: 'https://img-4.linternaute.com/hjM5dgLFPajbUWUmTVDwLHOqt3c=/1240x/19547719906f480d80a7c0a77d93f6be/ccmcms-linternaute/127232.jpg'}}
+            source={{uri: `${REACT_APP_API_URL_IMAGE}${urlImage}`}}
           ></Image>
         </View>
         <View style={styles.cardText}>
