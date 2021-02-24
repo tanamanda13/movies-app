@@ -2,13 +2,14 @@ import React from 'react'
 import { View, Text, StyleSheet, FlatList } from 'react-native'
 
 import Card from './Card';
-import data from '../helpers/filmDatas.js';
+// import data from '../helpers/filmDatas.js';
 
-const ListResults = () => {
+const ListResults = ({movies}) => {
   return (
     <View style={styles.listContainer}>
       <FlatList
-        data={data}
+        // data={data}
+        data={movies}
         renderItem={({item}) => <Card movieTitle={item.title} releaseDate={item.release_date}/> }
         keyExtractor={item => item.id.toString()}
       />

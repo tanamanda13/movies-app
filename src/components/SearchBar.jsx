@@ -2,13 +2,14 @@ import React from 'react'
 import { Button, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const SearchBar = () => {
+const SearchBar = ({searchText, onSearch}) => {
   return (
       <View style={styles.searchBarContainer}>
         <Text style={styles.searchBarTitle}>Search</Text>
         <View style={styles.searchBarInput}>
           <MaterialCommunityIcons style={styles.searchIcon} name="filmstrip-box-multiple" size={24} color="black" />
           <TextInput 
+            onChangeText={text => onSearch(text)}
             style={styles.searchBarTextInput} 
             placeholder="Entrez votre recherche"
             // icon={()=> <MaterialCommunityIcons name="access-point" size={2} color="red"/>}
