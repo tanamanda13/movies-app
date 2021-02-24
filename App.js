@@ -11,7 +11,9 @@ export default function App() {
   const [movies, setMovies] = useState(data);
 
   const getSearchMovies = (searchText) => {
-    const searchMovies = data.filter( movie => movie.title.includes(searchText) )
+    const searchMovies = data.filter(movie => 
+      movie.title.toLowerCase().includes(searchText.toLowerCase())
+    )
     // console.log(searchMovies);
     setMovies(searchMovies)
   }
